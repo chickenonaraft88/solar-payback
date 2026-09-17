@@ -1,0 +1,35 @@
+{
+  "energy_sources": [
+    {
+      "type": "solar",
+      "stat_energy_from": "solar_payback_test:solar_production",
+      "config_entry_solar_forecast": null
+    },
+    {
+      "type": "grid",
+      "flow_from": [
+        {
+          "stat_energy_from": "solar_payback_test:grid_import",
+          "stat_cost": null,
+          "entity_energy_price": null,
+          "number_energy_price": 0.28
+        }
+      ],
+      "flow_to": [
+        {
+          "stat_energy_to": "solar_payback_test:grid_export",
+          "stat_compensation": null,
+          "entity_energy_price": null,
+          "number_energy_price": 0.09
+        }
+      ],
+      "cost_adjustment_day": 0.0
+    },
+    {
+      "type": "battery",
+      "stat_energy_from": "solar_payback_test:battery_discharge",
+      "stat_energy_to": "solar_payback_test:battery_charge"
+    }
+  ],
+  "device_consumption": []
+}
