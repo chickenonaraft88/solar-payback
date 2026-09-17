@@ -6,3 +6,5 @@ services:
       - "8123:8123"
     volumes:
       - ./config:/config
+      - ./configuration.yaml:/config/configuration.yaml
+      - ../custom_components/solar_payback:/config/custom_components/solar_payback
