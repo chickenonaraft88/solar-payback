@@ -5,6 +5,7 @@ from __future__ import annotations
 import subprocess
 import sys
 import time
+import webbrowser
 from pathlib import Path
 
 import requests
@@ -32,6 +33,7 @@ def main() -> None:
     subprocess.run(
         [sys.executable, str(HARNESS_DIR / "seed" / "seed_demo.py")], check=True
     )
+    webbrowser.open(BASE_URL)
 
 
 if __name__ == "__main__":
