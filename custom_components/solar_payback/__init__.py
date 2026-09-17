@@ -2,10 +2,20 @@
 
 from __future__ import annotations
 
+import voluptuous as vol
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 
+from .const import DOMAIN
+
+CONFIG_SCHEMA = vol.Schema({DOMAIN: vol.Schema({})}, extra=vol.ALLOW_EXTRA)
+
 PLATFORMS: list[str] = []
+
+
+async def async_setup(hass: HomeAssistant, config: dict) -> bool:
+    """Set up Solar Payback Tracker from YAML."""
+    return True
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
