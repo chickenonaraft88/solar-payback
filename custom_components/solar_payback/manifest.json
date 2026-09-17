@@ -1,0 +1,11 @@
+{
+  "domain": "solar_payback",
+  "name": "Solar Payback Tracker",
+  "codeowners": ["@chickenonaraft88"],
+  "config_flow": false,
+  "dependencies": ["energy", "recorder"],
+  "documentation": "https://github.com/chickenonaraft88/solar-payback",
+  "iot_class": "calculated",
+  "requirements": [],
+  "version": "0.1.0"
+}

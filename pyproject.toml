@@ -1,0 +1,21 @@
+[project]
+name = "solar-payback-tracker"
+version = "0.1.0"
+description = "Home Assistant integration tracking real payback progress of a solar + battery installation"
+authors = [
+    { name = "Sandbox6168", email = "2820492+Sandbox6168@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "pytest-asyncio>=0.24",
+    "pytest-homeassistant-custom-component>=0.13.200",
+    "websockets>=13.0",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
